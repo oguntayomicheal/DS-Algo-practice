@@ -15,7 +15,20 @@ const subString1 = (string, length = string.length) => {
     return stringArr
 }
 
-
+const subString2 = (string, length = string.length) => {
+    const stringArr = [] 
+    for ( i=0; i< length; i++) {
+        let newSubString = ''
+        for ( j=i; j< length; j++) {
+           newSubString += string.charAt(j)
+           stringArr.push(newSubString)
+        }
+       
+    }
+    return stringArr
+    //Time complexity = O(n^2)
+    //space complexity = 
+}
 console.log(subString1('abc'))
 
 //Things learnt
