@@ -19,19 +19,16 @@ What you do is find the block of code in the algorithm that requires the most it
 We calculate Big O relative to the size of the input which we denote by n. So if we are given an array, array.length == n. We use the letter n because we're just saying we want to know approximately how many operations the algorithm would require for any array.length.
 
 
-function myAlgorithm(inputArray) {
-  const n = inputArray.length;
+#1 has no dependence on the input. No matter the data size, it will always perform the same number of operations, so we call this constant time O(1). It performs the same number of operations each time because the loop always goes from 0 to 20, regardless of the value used for input.
 
-  // We touch all n items, requiring O(n) operations
-  for (let i = 0; i < n; i++) {
-    // We don't care what happens in here as long as it's not another loop
+Note that for O(1), the algorithm's output does not depend on the input.
+
+// #1
+function printHello(input) {
+  let ten = 5 + 5;
+  let twenty = 2 * ten;
+
+  for (let i = 0; i < twenty; i++) {
+    console.log('Hello, world!');
   }
 }
-
-// myAlgorithm([1])  -->  input size = n = 1  -->  O(1) operations
-// myAlgorithm([1, 2])  -->  input size = n = 2  -->  O(2) operations
-// myAlgorithm([1, 2, 3])  -->  input size = n = 3  -->  O(3) operations
-// ...
-// myAlgorithm([1, 2, 3, ..., n])  -->  input size = n  -->  O(n) operations
-
-
