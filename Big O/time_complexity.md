@@ -18,10 +18,15 @@ What you do is find the block of code in the algorithm that requires the most it
 
 We calculate Big O relative to the size of the input which we denote by n. So if we are given an array, array.length == n. We use the letter n because we're just saying we want to know approximately how many operations the algorithm would require for any array.length.
 
+--- Constant time - O(1)
+#1 has no dependence on the input. No matter the data size, it will always perform the same number of operations, so we call this constant time O(1). 
 
-#1 has no dependence on the input. No matter the data size, it will always perform the same number of operations, so we call this constant time O(1). It performs the same number of operations each time because the loop always goes from 0 to 20, regardless of the value used for input.
+Constant time or O(1) means that we don't iterate through our data structureor the input. The operations that occur never increase, regardless of how our large our input gets.
 
-Note that for O(1), the algorithm's output does not depend on the input.
+Examples of constant time operations include: accessing a hash table by key, popping the last item of an array, or any normal arithmetic.
+
+
+Note/Summary - for O(1) the algorithm's output does not depend on the input (Output is constant)
 
 // #1
 function printHello(input) {
@@ -32,3 +37,7 @@ function printHello(input) {
     console.log('Hello, world!');
   }
 }
+
+It performs the same number of operations each time because the loop always goes from 0 to 20, regardless of the value used for input.
+
+
