@@ -41,3 +41,35 @@ function printHello(input) {
 It performs the same number of operations each time because the loop always goes from 0 to 20, regardless of the value used for input.
 
 
+--- Linear time - O(n) 
+This happens where we iterate through our input data structure once (or sequentially). As long as we don't nest loops, we will operate in linear time.
+
+If we have an input array with length 1,000,000, our for loop would iterate through one million items. If we have an input array with length 1,000,000,000, our for loop would iterate through one billion items. An O(n) time just means that the operations required is simply the length of the input. The operations and input size increase 1-for-1, or linearly.
+This applies to other iteration methods such as forEach, map, filter, reduce. They all iterate through our input data structure once, just like a for loop.
+
+Note/Summary - In O(n) there is single iteration through the input or data structure
+
+Since #2 uses one for loop, it will iterate the input for all items once, and this is what we call O(n).
+
+// #2
+function printInput(input) {
+  const n = input.length;
+  for (let i = 0; i < n; i++) {
+    console.log(i);
+  }
+}
+
+function myAlgorithm(inputArray) {
+  const n = inputArray.length;
+
+  // We touch all n items, requiring O(n) operations
+  for (let i = 0; i < n; i++) {
+    // We don't care what happens in here as long as it's not another loop
+  }
+}
+
+// myAlgorithm([1])  -->  input size = n = 1  -->  O(1) operations
+// myAlgorithm([1, 2])  -->  input size = n = 2  -->  O(2) operations
+// myAlgorithm([1, 2, 3])  -->  input size = n = 3  -->  O(3) operations
+// ...
+// myAlgorithm([1, 2, 3, ..., n])  -->  input size = n  -->  O(n) operations
