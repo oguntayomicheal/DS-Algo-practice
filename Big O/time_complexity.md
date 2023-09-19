@@ -82,3 +82,26 @@ The general name for when we raise n to a power is known as polynomial time.
 This happens when we nest loops.
 The more nesting you have, the more the exponent increases. If you have three nested loops, then the complexity becomes O(n`3).
 
+O(n2) - quadratic time
+Quadratic time means we have polynomial time where we know the exponent is 2.
+
+Brute force solutions are often quadratic time and are rarely acceptable as a final answer.
+
+// #3
+function printNestedInput(input) {
+  const n = input.length;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(i * j);
+    }
+  }
+}
+
+#3 has nested for loops, so it will iterate the input 1,000,000 times for all the 1,000,000 elements for a total of 1,000,000,000,000, and this makes it an O(n2) algorithm. That is 1 million vs. 1 trillion operations for #2 vs. #3.
+
+
+Be careful with hidden quadratic time. You may think you are doing a single loop but may perform another O(n) inside it. An example of this is when you slice array which is also linear time.
+
+function hiddenQuadratic(input) {
+  input.forEach((item, i) => console.log(item.slice(i)));
+}
