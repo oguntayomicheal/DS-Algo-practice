@@ -73,3 +73,12 @@ function myAlgorithm(inputArray) {
 // myAlgorithm([1, 2, 3])  -->  input size = n = 3  -->  O(3) operations
 // ...
 // myAlgorithm([1, 2, 3, ..., n])  -->  input size = n  -->  O(n) operations
+
+
+
+--- Polynomial time O(n raised to a power)
+The general name for when we raise n to a power is known as polynomial time. 
+
+This happens when we nest loops.
+The more nesting you have, the more the exponent increases. If you have three nested loops, then the complexity becomes O(n`3).
+
