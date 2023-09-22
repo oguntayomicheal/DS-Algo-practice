@@ -11,7 +11,13 @@ class LinkedList {
         this.size = 0;
     }
 
- 
+    isEmpty() {
+        return this.size === 0;
+    }
+
+    getSize() {
+        return this.size
+    }
 
 
 
