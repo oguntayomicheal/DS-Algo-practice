@@ -25,10 +25,12 @@ class LinkedList {
             this.head = newNode;
         } else {
             newNode.next = this.head
-            this.head.next = newNode
+            this.head = newNode
         }
         this.size++
     }
+
+ 
 
 
 
@@ -42,3 +44,5 @@ newList.prepend(1)
 newList.prepend(2)
 
 console.log(newList.getSize())
+
+console.log(newList.print())
