@@ -30,7 +30,20 @@ class LinkedList {
         this.size++
     }
 
- 
+    print() {
+        if (this.isEmpty()) {
+            return 'List is empty'
+        } else {
+            let listArray = [];
+            let currentNode = this.head;
+
+            while (currentNode) {
+                listArray.push(currentNode)
+                currentNode = currentNode.next
+            }
+            return listArray
+        }
+    }
 
 
 
