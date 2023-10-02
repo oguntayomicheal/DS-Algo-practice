@@ -19,7 +19,26 @@ class LinkedList {
         return this.size
     }
 
+    prepend(value) {
+        const newNode = new Node(value)
+        if (this.isEmpty()) {
+            this.head = newNode;
+        } else {
+            newNode.next = this.head
+            this.head.next = newNode
+        }
+        this.size++
+    }
+
 
 
 }
 
+const newList = new LinkedList()
+
+console.log(newList.getSize())
+
+newList.prepend(1)
+newList.prepend(2)
+
+console.log(newList.getSize())
