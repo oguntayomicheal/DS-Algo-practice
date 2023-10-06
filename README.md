@@ -28,7 +28,7 @@
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**DS and ALGO Studies** is a...
 
 ## 🛠 Programming languages <a name="built-with"></a>
 
