@@ -8,7 +8,6 @@ let arr21 = [5, 2, 1, 4]
 
 const arrayCompare = (arr1, arr2) => {
     let newArray = new Set(arr1)
-
     let newArray2 = new Set(arr2) 
     let symmetricArray = []
 
@@ -25,10 +24,6 @@ const arrayCompare = (arr1, arr2) => {
         }
        
     }
-
-    console.log(newArray2, newArray)
-
-
     return symmetricArray
 }
 
