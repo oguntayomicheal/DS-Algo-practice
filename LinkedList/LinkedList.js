@@ -45,6 +45,28 @@ class LinkedList {
         this.size++
     }
 
+    insert(value, index) {
+        if (index < 0 || index > this.size) {
+            return
+        } 
+        if (index === 0) {
+            this.prepend(value)
+        } else {
+            const newNode = new Node(value)
+            let previousNode = this.head;
+
+            for (let i = 0; i < index - 1; i++) {
+                previousNode = previousNode.next;
+            }
+            let remainingNode = previousNode.next;
+
+            previousNode.next = newNode;
+            newNode.next = remainingNode
+
+        }
+        this.size++
+    }
+
     removeFromIndex(index) {
         if (index < 0 || index >= this.size) {
             return null;
@@ -80,9 +102,6 @@ class LinkedList {
             return listArray
         }
     }
-
-
-
 }
 
 const newList = new LinkedList()
@@ -93,5 +112,16 @@ newList.prepend(1)
 newList.prepend(2)
 
 console.log(newList.getSize())
+
+console.log(newList.print())
+
+newList.append(7)
+
+console.log(newList.print())
+
+newList.insert(5, 3)
+console.log(newList.print())
+
+console.log(newList.removeFromIndex(0))
 
 console.log(newList.print())
